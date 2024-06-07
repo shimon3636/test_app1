@@ -34,12 +34,20 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  bool _isPressed = false;
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      _isPressed = !_isPressed;
     });
     _playSound();
+  }
+
+  void _setIsPressed() {
+    setState(() {
+      _isPressed = !_isPressed;
+    });
   }
 
   //Audio用にメソッド追加
@@ -59,6 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // デバイスの幅と高さを取得
+    final double deviceWidth = MediaQuery.of(context).size.width;
+    final double deviceHeight = MediaQuery.of(context).size.height;
+
+    // ボタンのサイズをデバイスのサイズに基づいて計算（ここでは幅の50％、高さの10％）
+    final double buttonWidth = deviceWidth * 0.5;
+    final double buttonHeight = deviceHeight * 0.1;
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -101,14 +116,30 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            SizedBox(
+              width: buttonWidth,
+              height: buttonHeight,
+              child: GestureDetector(
+                onTapDown: (_) => _incrementCounter(), // ボタンが押された瞬間に呼び出される
+                onTapUp: (_) => _setIsPressed(), // ボタンが離された瞬間に呼び出される
+                // onTapCancel: () => _incrementCounter(), // タッチがキャンセルされたときに呼び出される
+                child: Image.asset(
+                  _isPressed
+                      ? 'assets/images/スイッチ押下中.jpg'
+                      : 'assets/images/スイッチ押下前.jpg',
+                  fit: BoxFit.contain, // 画像をボタンサイズにフィットさせる
+                ),
+              ),
+            )
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // 右下のボタンを停止
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
