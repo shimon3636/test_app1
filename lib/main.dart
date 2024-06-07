@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
     int randomNumber = Random().nextInt(100);
     if (randomNumber < 10) {
       // 10%の確率で当たった場合の処理
-      AssetSource('sounds/GravityDragon.mp3');
+      await _audioPlayer.play(AssetSource('sounds/GravityDragon.mp3'));
     } else {
       await _audioPlayer
           .play(AssetSource(_sounds[Random().nextInt(_sounds.length)]));
