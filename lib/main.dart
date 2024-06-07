@@ -53,15 +53,21 @@ class _MyHomePageState extends State<MyHomePage> {
   //Audio用にメソッド追加
   final AudioPlayer _audioPlayer = AudioPlayer();
   final List<String> _sounds = [
-    'sounds/GravityDragon.mp3',
     'sounds/Caution.mp3',
     'sounds/BigLight.mp3',
   ];
 
   void _playSound() async {
     // 非同期処理を行うためにasyncを使用
-    await _audioPlayer
-        .play(AssetSource(_sounds[Random().nextInt(_sounds.length)]));
+    // ランダムな数値を生成（0から99まで）
+    int randomNumber = Random().nextInt(100);
+    if (randomNumber < 10) {
+      // 10%の確率で当たった場合の処理
+      AssetSource('sounds/GravityDragon.mp3');
+    } else {
+      await _audioPlayer
+          .play(AssetSource(_sounds[Random().nextInt(_sounds.length)]));
+    }
     // awaitを使用して音声の再生が完了するまで待機
   }
 
