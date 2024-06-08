@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'dart:math';
 import 'page2.dart';
+import 'page3.dart';
 
 class MyHomePage extends StatefulWidget {
   static const path = '/page1';
@@ -99,6 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               onPressed: () => GoRouter.of(context).push(Page2.path),
               child: const Text('Go to page2'),
+            ),
+            TextButton(
+              onPressed: () => context.go(Page3.path),
+              child: const Text('Go to page3'),
             ),
           ],
         ),
