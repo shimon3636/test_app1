@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Bomberは誰のもの？'),
     );
   }
 }
@@ -65,10 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
       // 10%の確率で当たった場合の処理
       await _audioPlayer.play(AssetSource('sounds/GravityDragon.mp3'));
     } else {
+      // awaitを使用して音声の再生が完了するまで待機
       await _audioPlayer
           .play(AssetSource(_sounds[Random().nextInt(_sounds.length)]));
     }
-    // awaitを使用して音声の再生が完了するまで待機
   }
 
   @override
@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'グラビティードラゴンで飲めるかい？',
             ),
             Text(
               '$_counter',

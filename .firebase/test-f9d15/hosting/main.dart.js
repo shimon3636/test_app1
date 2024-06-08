@@ -60957,7 +60957,7 @@ s=A.aO(a).ax
 r=s.y2
 s=r==null?s.c:r
 o.a.toString
-r=A.af_("Flutter Demo Home Page",n)
+r=A.af_("Bomber\u306f\u8ab0\u306e\u3082\u306e\uff1f",n)
 q=A.af_(""+o.d,A.aO(a).p2.e)
 p=o.e?"assets/images/\u30b9\u30a4\u30c3\u30c1\u62bc\u4e0b\u4e2d.jpg":"assets/images/\u30b9\u30a4\u30c3\u30c1\u62bc\u4e0b\u524d.jpg"
 return new A.u2(new A.pJ(r,s,new A.J5(n,n,1/0,56),n),A.Oc(A.alQ(A.a([B.L0,q,A.a_c(A.a9i(n,new A.rj(A.ap8(n,n,new A.pN(p,n,n)),B.vi,n),B.ch,!1,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,new A.a4F(o),new A.a4G(o)),m.a.b*0.1,l.a.a*0.5)],t.af),B.ow),n,n),n)},
@@ -65245,7 +65245,7 @@ B.K6=new A.k(!0,B.y,null,"Roboto",B.z,null,null,null,null,null,null,null,null,nu
 B.Jv=new A.k(!0,B.m,null,"Roboto",B.z,null,null,null,null,null,null,null,null,null,null,null,null,B.e,null,null,null,"blackHelsinki labelMedium",null,null,null,null)
 B.JF=new A.k(!0,B.m,null,"Roboto",B.z,null,null,null,null,null,null,null,null,null,null,null,null,B.e,null,null,null,"blackHelsinki labelSmall",null,null,null,null)
 B.L_=new A.cz(B.Ks,B.HC,B.IA,B.Ju,B.JH,B.H2,B.I9,B.H6,B.Je,B.JU,B.IK,B.JW,B.K6,B.Jv,B.JF)
-B.L0=new A.o5("You have pushed the button this many times:",null,null,null,null)
+B.L0=new A.o5("\u30b0\u30e9\u30d3\u30c6\u30a3\u30fc\u30c9\u30e9\u30b4\u30f3\u3067\u98f2\u3081\u308b\u304b\u3044\uff1f",null,null,null,null)
 B.Nw=new A.a0H(0,"system")
 B.L1=new A.uJ(null)
 B.eq=new A.En(0,"clamp")
