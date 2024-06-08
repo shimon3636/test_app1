@@ -65,9 +65,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // 10%の確率で当たった場合の処理
       await _audioPlayer.play(AssetSource('sounds/GravityDragon.mp3'));
     } else {
+      //文字列をランダムに順番を変える
+      _sounds.shuffle();
       // awaitを使用して音声の再生が完了するまで待機
-      await _audioPlayer
-          .play(AssetSource(_sounds[Random().nextInt(_sounds.length)]));
+      //　1番目の文字列を表示する
+      await _audioPlayer.play(AssetSource(_sounds[0]));
     }
   }
 
