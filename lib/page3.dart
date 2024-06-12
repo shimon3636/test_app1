@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class Page3 extends StatefulWidget {
-  const Page3({Key? key}) : super(key: key);
+  const Page3({super.key});
   static const path = '/page3';
   @override
-  _Page3State createState() => _Page3State();
+  State<Page3> createState() => _Page3State();
 }
 
 class _Page3State extends State<Page3> {
@@ -17,7 +17,7 @@ class _Page3State extends State<Page3> {
       ),
       body: TextButton(
         onPressed: () => context.go("/page1"),
-        child: Text('back'),
+        child: const Text('back'),
       ),
     );
   }

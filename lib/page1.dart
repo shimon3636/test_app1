@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:test_app1/play_game_all.dart';
 import 'dart:math';
-import 'page2.dart';
 import 'page3.dart';
+import 'play_game1.dart';
 
 class MyHomePage extends StatefulWidget {
   static const path = '/page1';
@@ -98,8 +99,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             TextButton(
-              onPressed: () => GoRouter.of(context).push(Page2.path),
-              child: const Text('Go to page2'),
+              onPressed: () => GoRouter.of(context).push(PlayGame1.path),
+              child: const Text('一人で遊ぶ'),
+            ),
+            TextButton(
+              onPressed: () => GoRouter.of(context).push(PlayGameAll.path),
+              child: const Text('みんなで遊ぶ'),
             ),
             TextButton(
               onPressed: () => context.go(Page3.path),
