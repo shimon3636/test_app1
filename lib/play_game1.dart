@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'battle_com.dart';
 
 class PlayGame1 extends StatefulWidget {
   const PlayGame1({super.key});
@@ -18,9 +19,10 @@ class _PlayGame1 extends State<PlayGame1> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () => GoRouter.of(context).pop(),
+              onPressed: () => GoRouter.of(context).push(BattleCom.path),
               child: const Text('COM対戦'),
             ),
             ElevatedButton(

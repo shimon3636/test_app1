@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'page1.dart';
-import 'page2.dart';
+import 'battle_com.dart';
 import 'page3.dart';
 import 'play_game1.dart';
 import 'play_game_all.dart';
@@ -17,10 +17,10 @@ final router = GoRouter(
       ),
     ),
     GoRoute(
-      path: Page2.path,
+      path: BattleCom.path,
       pageBuilder: (BuildContext context, GoRouterState? state) =>
           const MaterialPage(
-        child: Page2(),
+        child: BattleCom(),
       ),
     ),
     GoRoute(
