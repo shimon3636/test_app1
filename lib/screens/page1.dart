@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:test_app1/play_game_all.dart';
+import 'package:test_app1/screens/play_game_all.dart';
 import 'dart:math';
 import 'page3.dart';
 import 'play_game1.dart';
