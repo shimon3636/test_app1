@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'battle_com.dart';
+import 'menu_battle_com.dart';
 
 class PlayGame1 extends StatelessWidget {
   const PlayGame1({super.key});

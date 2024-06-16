@@ -24,7 +24,7 @@ class _BattleComState extends State<BattleCom> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
-                onPressed: () => GoRouter.of(context).pop(),
+                onPressed: () => context.go('/play_game_com/3'),
                 child: const Text('スタート')),
           ),
           TextButton(

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'screens/page1.dart';
-import 'screens/battle_com.dart';
+import 'screens/menu_battle_com.dart';
 import 'screens/page3.dart';
 import 'screens/play_game1.dart';
 import 'screens/play_game_all.dart';
+import 'screens/game_screen.dart';
 
 final router = GoRouter(
   initialLocation: MyHomePage.path,
@@ -43,6 +44,15 @@ final router = GoRouter(
           const MaterialPage(
         child: PlayGameAll(),
       ),
+    ),
+    GoRoute(
+      path: GameScreen.path,
+      builder: (context, state) {
+        final number = int.parse(state.pathParameters['number']!);
+        return GameScreen(
+          playerCount: number,
+        );
+      },
     ),
     // ここに「GoRouterの追加分」を後で追加
   ],
